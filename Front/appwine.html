@@ -14,126 +14,107 @@
   </head>
   <body style="background-image: url('covid.jpg');">
     <div class="container mb-5" style="background: rgba(150, 247, 105, 0.705); opacity: 0.8;">
-        <div class="row justify-content-center shadow p-3 mb-5 rounded  py-5  " >
-          <div class="col-md-auto" >
-            <h1>Descubre si tienes covid-19</h1>
-          </div>
+      <div class="row justify-content-center shadow p-3 mb-5 rounded  py-5  " >
+        <div class="col-md-auto" >
+          <h1>Descubre si tienes covid-19</h1>
         </div>
+      </div>
     </div>
     <div class="container">
-        <div class="row justify-content-center shadow p-3 mb-5 rounded py-2 " style="background: rgba(117, 206, 241, 0.815);" >
-          <div class="col-md-auto justify-content-center shadow p-3 mb-5 rounded py-2" >
-            <div class="col-md-auto justify-content-center justify-content-center"  ><h1>Bienvenido en esta página sabrá si posee la enfermedad</h1></div>
-            <div class="col-md-auto justify-content-center justify-content-center"  ><h1> covid-19 a partir de algunos datos</h1></div>
-            
-          </div>
+      <div class="row justify-content-center shadow p-3 mb-5 rounded py-2 " style="background: rgba(117, 206, 241, 0.815);" >
+        <div class="col-md-auto justify-content-center shadow p-3 mb-5 rounded py-2" >
+          <div class="col-md-auto justify-content-center justify-content-center"  ><h1>Bienvenido en esta página sabrá si posee la enfermedad</h1></div>
+          <div class="col-md-auto justify-content-center justify-content-center"  ><h1> covid-19 a partir de algunos datos</h1></div>
+          
         </div>
+      </div>
     </div>
 
     <div class="container shadow p-5 mb-5 rounded " style="background: rgba(117, 206, 241, 0.815);">
 
-          <div class="row justify-content-center p-5 mb-5 rounded" style="background: rgba(117, 206, 241, 0.815);" >
-                
-            <div class="col-md-auto justify-content-center "  ><h4>Para saber que tan efetivo es el algoritmo puede probarlo dando click en el botón "Probar". Se mostrará el porcentaje de aciertos entre las predicciones y los datos verdaderos.</h4></div>
-            <div class="col-md-auto justify-content-center "  ><h4></h4> </div>
-        
-        </div>
-        <div class="row justify-content-center  p-3 mb-5 rounded"  >
+      <div class="row justify-content-center p-5 mb-5 rounded" style="background: rgba(117, 206, 241, 0.815);" >
             
-            <button type="submit" class="btn btn-primary" onclick="myFunction()">Probar</button>
+        <div class="col-md-auto justify-content-center "  ><h4>Para saber que tan efetivo es el algoritmo puede probarlo dando click en el botón "Probar". Se mostrará el porcentaje de aciertos entre las predicciones y los datos verdaderos.</h4></div>
+        <div class="col-md-auto justify-content-center "  ><h4></h4> </div>
+    
+    </div>
+    <div class="row justify-content-center  p-3 mb-5 rounded"  >
         
-        </div>
+        <button type="submit" class="btn btn-primary" onclick="myFunction()">Probar</button>
+    
+    </div>
 
-        <div class="row justify-content-center shadow p-3 mb-5 rounded  " >
-            <div id="rpta" class="row justify-content-center shadow p-3 rounded bg-light" >
-                
-            </div>
+    <div class="row justify-content-center shadow p-3 mb-5 rounded  " >
+        <div id="rpta" class="row justify-content-center shadow p-3 rounded bg-light" >
+            
         </div>
     </div>
+  </div>
 
     <div class="container p-5 mb-5" style="background : rgba(117, 206, 241, 0.815);">
         <div class="clo justify-content-center bg-light shadow p-5 mb-5 rounded py-5 px-8"  >
 
-            <div class="row justify-content-center shadow p-3 mb-5 rounded py-5" style="background : rgba(241, 27, 27, 0.082);">
+            <div class="row justify-content-center shadow p-3 mb-5 rounded py-5" style="background : rgba(117, 206, 241, 0.815);">
                 <div>
-                  Para probar la calidad de su vino debe completar estos datos del licor y la cantidad de vecinos con la que desea compararlo (K)
+                  Para probar la calidad de su vino debe completar estos datos del licor y la cantidad de vecimos con la que desea compararlo (K)
                 </div>  
             </div>
 
 
             <div  class="col justify-content-center bg-light shadow p-3 mb-5 rounded py-5" >
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Acidez Fija</label>
+                    <label class="col-sm-2 col-form-label">Departamento</label>
                     <div class="col-sm-10">
-                      <input id="V1" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 15.0">
+                      <input id="V1" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 24.0">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Acidez Volátil</label>
+                    <label class="col-sm-2 col-form-label">Edad</label>
                     <div class="col-sm-10">
-                      <input id="V2" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 1.0">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">
-                        Acido Cítrico</label>
-                    <div class="col-sm-10">
-                      <input id="V3" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 1.0">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Azucar Residual</label>
-                    <div class="col-sm-10">
-                      <input id="V4" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 12.0">
+                      <input id="V2" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 100.0">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">
-                        Cloruro</label>
+                      Sexo</label>
                     <div class="col-sm-10">
-                      <input id="V5" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 0.09">
+                      <input id="V3" type="text" class="form-control" id="inputPassword" placeholder="0.0 = Hombre o 1.0 = Mujer (Colocar números)">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Peso</label>
+                    <div class="col-sm-10">
+                      <input id="V4" type="text" class="form-control" id="inputPassword" placeholder="Entre 10.0 y 120.0">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">
-                        Dióxido de azufre libre</label>
+                        Altura</label>
                     <div class="col-sm-10">
-                      <input id="V6" type="text" class="form-control" id="inputPassword" placeholder="Entre 0 y 60">
+                      <input id="V5" type="text" class="form-control" id="inputPassword" placeholder="Entre 1.0 y 2.0 metros">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">
-                        Dióxido de azufre total</label>
+                      Temperatura</label>
                     <div class="col-sm-10">
-                      <input id="V7" type="text" class="form-control" id="inputPassword" placeholder="Entre 0 y 200">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Densidad</label>
-                    <div class="col-sm-10">
-                      <input id="V8" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.000 y 0.999">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">PH</label>
-                    <div class="col-sm-10">
-                      <input id="V9" type="text" class="form-control" id="inputPassword" placeholder="Entre 2.9 y 3.9">
+                      <input id="V6" type="text" class="form-control" id="inputPassword" placeholder="Entre 35.0 y 42.0 C°">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">
-                        Sulfato</label>
+                        Tos Seca</label>
                     <div class="col-sm-10">
-                      <input id="V10" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.00 y 1.50">
+                      <input id="V7" type="text" class="form-control" id="inputPassword" placeholder="0.0 = NO o 1.0 = SI (Colocar números)">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">
-                        Alcohol</label>
+                    <label class="col-sm-2 col-form-label">Cansancio</label>
                     <div class="col-sm-10">
-                      <input id="V11" type="text" class="form-control" id="inputPassword" placeholder="Entre 8.0 y 12.0">
+                      <input id="V8" type="text" class="form-control" id="inputPassword" placeholder="0.0 = NO o 1.0 = SI (Colocar números)">
                     </div>
                 </div>
+
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">
                         K</label>
@@ -149,7 +130,7 @@
             </div>
 
 
-            <div id="rptaDos" class="row justify-content-center shadow p-3 mb-5 rounded py-5" style="background : rgba(241, 27, 27, 0.082);" >
+            <div id="rptaDos" class="row justify-content-center shadow p-3 mb-5 rounded py-5" style="background : rgba(117, 206, 241, 0.815);" >
                 
             </div>
         </div>
@@ -182,7 +163,7 @@
                     async: false, 
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
-                    url:"http://localhost:8000/probabilidad", //url guarda la ruta hacia donde se hace la peticion
+                    url:"http://127.0.0.1:5000/api/covid", //url guarda la ruta hacia donde se hace la peticion
                     data:  JSON.stringify({
                         v1:document.getElementById("V1").value,
                         v2:document.getElementById("V2").value,
@@ -192,9 +173,6 @@
                         v6:document.getElementById("V6").value,
                         v7:document.getElementById("V7").value,
                         v8:document.getElementById("V8").value,
-                        v9:document.getElementById("V9").value,
-                        v10:document.getElementById("V10").value,
-                        v11:document.getElementById("V11").value,
                         kvariable: document.getElementById("K").value
                         
                         }),
@@ -224,10 +202,10 @@
                     async: false, 
                     global: true,
                     dataType: "json",
-                    url: 'http://localhost:8000/probabilidad',
+                    url: 'http://127.0.0.1:5000/api/covid',
                     success: function(result){
                         console.log(result);
-                        porcentaje = result[(result.length)-1].porcent;
+                        porcentaje = result[(result.length)-1].porcentaje;
                         console.log();
                         
                 }
