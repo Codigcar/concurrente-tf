@@ -10,7 +10,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import preprocessing
 
 import socket
+import pickle
+import json
 
+class ProcessData:
+    nombre = "piero"
 
 
 def resultcovid():
@@ -43,12 +47,39 @@ def resultcovid():
     porcentaje = knn.score(X_train,Y_train)
     print(porcentaje)
 
-    mi_socket = socket.socket()
-    mi_socket.connect(('localhost',8000))
+    # mi_socket = socket.socket()
+    # mi_socket.connect(('localhost',8000))
 
-    mi_socket.send(b'hello')
+    m = {'Uno':"gfsfgdsfgdsfgds", 
+            'Dos':"hi"}
+    # msg = pickle.dumps(d)
+    # mi_socket.send(msg.encode())
     
-    mi_socket.close()
+    # mi_socket.close()
+
+    data = json.dumps(m)
+
+
+    HOST = 'localhost'
+    PORT = 8000
+    # Create a socket connection.
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((HOST, PORT))
+
+    #variable = ProcessData()
+
+    #data_string = pickle.dumps(variable)
+    #print(data_string)
+    print(data)
+    print(type(data))
+    otradata = bytes(data,encoding="utf-8")
+    print (otradata)
+    s.sendall(bytes(data,encoding="utf-8"))
+
+    s.close()
+
+
+
 
     
     return porcentaje*100
