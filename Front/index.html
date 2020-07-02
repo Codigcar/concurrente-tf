@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Concurrencia TF</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+</head>
+
+<body style="background-image: url('assets/covid.jpg');">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="diagnostico.html">Diagnostico</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="grupos_de_riesgo.html">Grupos de riesgo</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mb-5" style="background: rgba(150, 247, 105, 0.705); opacity: 0.8;">
+    <div class="row justify-content-center shadow p-3 mb-5 rounded py-5">
+      <div class="col-md-auto">
+        <h1>Descubre si tienes covid-19</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center shadow p-3 mb-5 rounded py-2"
+      style="background: rgba(117, 206, 241, 0.815);">
+      <div class="col-md-auto justify-content-center shadow p-3 mb-5 rounded py-2">
+        <div class="col-md-auto justify-content-center justify-content-center">
+          <h1>Bienvenido en esta página sabrá si posee la enfermedad</h1>
+        </div>
+        <div class="col-md-auto justify-content-center justify-content-center">
+          <h1>covid-19 a partir de algunos datos</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container shadow p-5 mb-5 rounded" style="background: rgba(117, 206, 241, 0.815);">
+    <div class="row justify-content-center p-5 mb-5 rounded" style="background: rgba(117, 206, 241, 0.815);">
+      <div class="col-md-auto justify-content-center">
+        <h4>
+          Para saber que tan efetivo es el algoritmo puede probarlo dando
+          click en el botón "Probar". Se mostrará el porcentaje de aciertos
+          entre las predicciones y los datos verdaderos.
+        </h4>
+      </div>
+      <div class="col-md-auto justify-content-center">
+        <h4></h4>
+      </div>
+    </div>
+    <div class="row justify-content-center p-3 mb-5 rounded">
+      <button type="submit" class="btn btn-primary" onclick="myFunction()">
+        Probar
+      </button>
+    </div>
+
+    <div class="row justify-content-center shadow p-3 mb-5 rounded">
+      <div id="rpta" class="row justify-content-center shadow p-3 rounded bg-light"></div>
+    </div>
+  </div>
+
+  <div class="container p-5 mb-5" style="background: rgba(117, 206, 241, 0.815);">
+    <div class="clo justify-content-center bg-light shadow p-5 mb-5 rounded py-5 px-8">
+      <div class="row justify-content-center shadow p-3 mb-5 rounded py-5"
+        style="background: rgba(117, 206, 241, 0.815);">
+        <div>
+          Para probar la calidad de su vino debe completar estos datos del
+          licor y la cantidad de vecimos con la que desea compararlo (K)
+        </div>
+      </div>
+
+      <div class="col justify-content-center bg-light shadow p-3 mb-5 rounded py-5">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Departamento</label>
+          <div class="col-sm-10">
+            <input id="V1" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 24.0" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Edad</label>
+          <div class="col-sm-10">
+            <input id="V2" type="text" class="form-control" id="inputPassword" placeholder="Entre 0.0 y 100.0" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"> Sexo</label>
+          <div class="col-sm-10">
+            <input id="V3" type="text" class="form-control" id="inputPassword"
+              placeholder="0.0 = Hombre o 1.0 = Mujer (Colocar números)" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Peso</label>
+          <div class="col-sm-10">
+            <input id="V4" type="text" class="form-control" id="inputPassword" placeholder="Entre 10.0 y 120.0" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"> Altura</label>
+          <div class="col-sm-10">
+            <input id="V5" type="text" class="form-control" id="inputPassword" placeholder="Entre 1.0 y 2.0 metros" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"> Temperatura</label>
+          <div class="col-sm-10">
+            <input id="V6" type="text" class="form-control" id="inputPassword" placeholder="Entre 35.0 y 42.0 C°" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"> Tos Seca</label>
+          <div class="col-sm-10">
+            <input id="V7" type="text" class="form-control" id="inputPassword"
+              placeholder="0.0 = NO o 1.0 = SI (Colocar números)" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Cansancio</label>
+          <div class="col-sm-10">
+            <input id="V8" type="text" class="form-control" id="inputPassword"
+              placeholder="0.0 = NO o 1.0 = SI (Colocar números)" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"> K</label>
+          <div class="col-sm-10">
+            <input id="K" type="text" class="form-control" id="inputPassword" placeholder="K vecinos" />
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <button type="submit" class="justify-content-center btn btn-primary" onclick="myFunctionPost()">
+            Probar
+          </button>
+        </div>
+      </div>
+
+      <div id="rptaDos" class="row justify-content-center shadow p-3 mb-5 rounded py-5"
+        style="background: rgba(117, 206, 241, 0.815);"></div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+
+  <script type="text/javascript">
+    var porcentaje;
+    var ana;
+    //carousel()
+
+    function myFunctionPost() {
+      var res;
+
+      $.ajax({
+        type: "POST",
+        async: false,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: "http://127.0.0.1:5000/api/covid", //url guarda la ruta hacia donde se hace la peticion
+        data: JSON.stringify({
+          v1: document.getElementById("V1").value,
+          v2: document.getElementById("V2").value,
+          v3: document.getElementById("V3").value,
+          v4: document.getElementById("V4").value,
+          v5: document.getElementById("V5").value,
+          v6: document.getElementById("V6").value,
+          v7: document.getElementById("V7").value,
+          v8: document.getElementById("V8").value,
+          kvariable: document.getElementById("K").value,
+        }),
+        processData: false,
+        success: function (datos) {
+          //success es una funcion que se utiliza si el servidor retorna informacion
+          console.log(datos.devoresultado);
+          res = datos.devoresultado;
+        },
+      });
+
+      var hola = document.getElementById("rptaDos");
+
+      hola.innerHTML = "El resultado es: " + res;
+      console.log(hola);
+    }
+
+    function myFunction() {
+      $.ajax({
+        method: "GET",
+        async: false,
+        global: true,
+        dataType: "json",
+        url: "http://127.0.0.1:5000/api/covid",
+        success: function (result) {
+          console.log(result);
+          porcentaje = result[result.length - 1].porcentaje;
+          console.log();
+        },
+      });
+
+      Show();
+    }
+
+    function Show() {
+      var hola = document.getElementById("rpta");
+
+      hola.innerHTML =
+        "El " +
+        porcentaje +
+        "% de los resultados del algoritmo coinsiden con los valores originales";
+      console.log(hola);
+    }
+  </script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
