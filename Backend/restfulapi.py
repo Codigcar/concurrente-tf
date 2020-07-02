@@ -50,37 +50,6 @@ def resultcovid():
     # mi_socket = socket.socket()
     # mi_socket.connect(('localhost',8000))
 
-    m = {'Uno':"gfsfgdsfgdsfgds", 
-            'Dos':"hi"}
-    # msg = pickle.dumps(d)
-    # mi_socket.send(msg.encode())
-    
-    # mi_socket.close()
-
-    data = json.dumps(m)
-
-
-    HOST = 'localhost'
-    PORT = 8000
-    # Create a socket connection.
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((HOST, PORT))
-
-    #variable = ProcessData()
-
-    #data_string = pickle.dumps(variable)
-    #print(data_string)
-    print(data)
-    print(type(data))
-    otradata = bytes(data,encoding="utf-8")
-    print (otradata)
-    s.sendall(bytes(data,encoding="utf-8"))
-
-    s.close()
-
-
-
-
     
     return porcentaje*100
 
@@ -143,6 +112,57 @@ class Covid(Resource):
         arrsca = preprocessing.scale(arr)
         rpta = knn.predict([arrsca])
         print(rpta[0]) 
+
+
+
+        m = {   
+                'Command':'Aviso', 
+                'Hostname': 'aca',
+                'List' : [
+                    'nada'
+                ],
+                'Informacion': {'Id': 602.0, 
+                'Departamento': arr[0],
+                'Edad': arr[1],
+                'Sexo': arr[2],
+                'Peso': arr[3],
+                'Altura': arr[4],
+                'Temperatura': arr[5],
+                'TosSeca': arr[6],
+                'Cansancio': arr[7],
+                'Infectado': rpta[0]
+                },
+                'UltHa' : {
+                    'UltHash': 12.21
+                }
+            }
+        # msg = pickle.dumps(d)
+        # mi_socket.send(msg.encode())
+        
+        # mi_socket.close()
+
+        data = json.dumps(m)
+
+
+        HOST = 'localhost'
+        PORT = 8002
+        # Create a socket connection.
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((HOST, PORT))
+
+        #variable = ProcessData()
+
+        #data_string = pickle.dumps(variable)
+        #print(data_string)
+        print(data)
+        print(type(data))
+        otradata = bytes(data,encoding="utf-8")
+        print (otradata)
+        s.sendall(bytes(data,encoding="utf-8"))
+
+        s.close()
+
+
 
 
         return {'devoresultado': str(rpta[0])},201
