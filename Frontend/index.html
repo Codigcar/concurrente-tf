@@ -227,8 +227,14 @@
 
       var hola = document.getElementById("rptaDos");
 
-      hola.innerHTML = "El resultado es: " + res;
-      console.log(hola);
+      if (res == 0.0) {
+        hola.innerHTML = "El resultado es: negativo!!  Usted no tiene Covid";
+        console.log(hola);
+      } else {
+        hola.innerHTML = "El resultado es: positivo!!  Usted tiene Covid";
+        console.log(hola);
+      }
+
     }
 
     function myFunction() {

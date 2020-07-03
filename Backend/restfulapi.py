@@ -13,6 +13,9 @@ import socket
 import pickle
 import json
 
+class ProcessData:
+    nombre = "piero"
+
 
 def resultcovid():
 
@@ -39,7 +42,7 @@ def resultcovid():
 
 
     X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size = .33, random_state = 17)
-    knn = KNeighborsClassifier(n_neighbors=7)
+    knn = KNeighborsClassifier(n_neighbors=50)
     knn.fit(X_test,Y_test)
     porcentaje = knn.score(X_train,Y_train)
     print(porcentaje)
@@ -55,7 +58,6 @@ def resultcovid():
 
 
 app = Flask(__name__)
-cors = CORS(app)
 api = Api(app)
 
 
