@@ -1,5 +1,6 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
+from flask_cors import CORS
 
 import sklearn
 import numpy as np
@@ -12,9 +13,6 @@ from sklearn import preprocessing
 import socket
 import pickle
 import json
-
-class ProcessData:
-    nombre = "piero"
 
 
 def resultcovid():
@@ -58,6 +56,7 @@ def resultcovid():
 
 
 app = Flask(__name__)
+cors = CORS(app)
 api = Api(app)
 
 
